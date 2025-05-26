@@ -1,8 +1,9 @@
+import 'package:e_commerce_app/features/splashscreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
   static Map<String, WidgetBuilder> routes = {
-    //  splash: (context) => const SplashScreen(),
+     splash: (context) => const SplashScreen(),
     //   welcome: (context) => const WelcomeScreen(),
     //   onboarding: (context) => const OnboardingScreen(),
     //   authentication: (context) => const AuthenticationScreen(),
