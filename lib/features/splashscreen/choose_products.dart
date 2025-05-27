@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/colors.dart';
 import 'package:e_commerce_app/widgets/textbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,7 +40,7 @@ class ChooseProducts extends StatelessWidget {
                 TextSpan(
                   text: "/3",
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: AppColors.greyColor,
                     fontSize: 20,
                     fontWeight: FontWeight.normal,
                   ),
@@ -49,8 +50,7 @@ class ChooseProducts extends StatelessWidget {
           ),
           LabelButton(
             onPressed: () {
-              // Navigate to previous screen
-              Navigator.pop(context);
+              Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
             },
             label: 'Skip',
             textColor: Colors.black,
