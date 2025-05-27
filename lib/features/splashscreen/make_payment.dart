@@ -3,8 +3,8 @@ import 'package:e_commerce_app/widgets/textbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ChooseProducts extends StatelessWidget {
-  const ChooseProducts({super.key});
+class MakePayment extends StatelessWidget {
+  const MakePayment({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ChooseProducts extends StatelessWidget {
       body: Column(
         children: [
           _buildTop(context),
-          SizedBox(height: 70.h),
+          SizedBox(height: 40.h),
           _buildImage(context),
           SizedBox(height: 20.h),
           _buildChooseProductText(),
@@ -30,7 +30,7 @@ class ChooseProducts extends StatelessWidget {
         children: [
           RichText(
             text: TextSpan(
-              text: "1",
+              text: "2",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
@@ -40,7 +40,7 @@ class ChooseProducts extends StatelessWidget {
                 TextSpan(
                   text: "/3",
                   style: TextStyle(
-                    color: AppColors.greyColor,
+                    color: Colors.grey,
                     fontSize: 20,
                     fontWeight: FontWeight.normal,
                   ),
@@ -50,7 +50,9 @@ class ChooseProducts extends StatelessWidget {
           ),
           LabelButton(
             onPressed: () {
-              Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+              Navigator.of(
+                context,
+              ).pushNamedAndRemoveUntil('/login', (route) => false);
             },
             label: 'Skip',
             textColor: Colors.black,
@@ -65,10 +67,9 @@ Widget _buildImage(BuildContext context) {
   final size = MediaQuery.of(context).size;
   return Center(
     child: Image.asset(
-      'assets/pngs/fashion shop-rafiki 1.png',
-      height: size.height * 0.35,
-      width: size.width * 0.7,
-      fit: BoxFit.contain,
+      'assets/pngs/Sales consulting-pana 1.png',
+      width: size.width * 0.8,
+      height: size.height * 0.3,
     ),
   );
 }
@@ -78,7 +79,7 @@ Widget _buildChooseProductText() {
     children: [
       Center(
         child: Text(
-          "Choose Products",
+          "Make Payment",
           style: TextStyle(
             color: Colors.black,
             fontSize: 24,
@@ -92,8 +93,12 @@ Widget _buildChooseProductText() {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: Text(
-            "Amet minim mollit non deserunt ullamco est\nsit aliqua dolor do amet sint. Velit officia\nconsequat duis enim velit mollit.",
-            style: TextStyle(color: Colors.grey, fontSize: 16),
+            "Amet minim mollit non deserunt ullamco est\nsit aliqua dolor do amet sint. Velit officia \nconsequat duis enim velit mollit.",
+            style: TextStyle(
+              color: AppColors.greyColor,
+              fontSize: 15,
+              fontFamily: 'Montserrat',
+            ),
             textAlign: TextAlign.center,
           ),
         ),
