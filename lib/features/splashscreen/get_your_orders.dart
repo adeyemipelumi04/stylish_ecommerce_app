@@ -3,8 +3,8 @@ import 'package:e_commerce_app/widgets/textbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ChooseProducts extends StatelessWidget {
-  const ChooseProducts({super.key});
+class GetYourOrder extends StatelessWidget {
+  const GetYourOrder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ChooseProducts extends StatelessWidget {
           SizedBox(height: 70.h),
           _buildImage(context),
           SizedBox(height: 20.h),
-          _buildChooseProductText(),
+          _buildGetYourOrderText(),
         ],
       ),
     );
@@ -30,9 +30,9 @@ class ChooseProducts extends StatelessWidget {
         children: [
           RichText(
             text: TextSpan(
-              text: "1",
+              text: "3",
               style: TextStyle(
-                color: Colors.black,
+                color: AppColors.blackColor,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -72,20 +72,20 @@ Widget _buildImage(BuildContext context) {
   final size = MediaQuery.of(context).size;
   return Center(
     child: Image.asset(
-      'assets/pngs/fashion shop-rafiki 1.png',
+      'assets/pngs/Shopping bag-rafiki 1.png',
       height: size.height * 0.35,
-      width: size.width * 0.7,
+      width: size.width * 0.8,
       fit: BoxFit.contain,
     ),
   );
 }
 
-Widget _buildChooseProductText() {
+Widget _buildGetYourOrderText() {
   return Column(
     children: [
       Center(
         child: Text(
-          "Choose Products",
+          "Get Your Order",
           style: TextStyle(
             color: Colors.black,
             fontSize: 24,
@@ -99,8 +99,12 @@ Widget _buildChooseProductText() {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: Text(
-            "Amet minim mollit non deserunt ullamco est\nsit aliqua dolor do amet sint. Velit officia\nconsequat duis enim velit mollit.",
-            style: TextStyle(color: Colors.grey, fontSize: 16),
+            "Amet minim mollit non deserunt ullamco est\nsit aliqua dolor do amet sint. Velit officia \nconsequat duis enim velit mollit.",
+            style: TextStyle(
+              color: AppColors.greyColor,
+              fontSize: 15,
+              fontFamily: 'Montserrat',
+            ),
             textAlign: TextAlign.center,
           ),
         ),

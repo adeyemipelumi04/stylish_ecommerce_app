@@ -38,7 +38,7 @@ class _AppState extends ConsumerState<App> {
             scaffoldBackgroundColor: Colors.black,
             canvasColor: MaterialTheme.darkScheme().surface,
           ),
-          initialRoute: AppRoutes.splash,
+          initialRoute: AppRoutes.login,
           routes: AppRoutes.routes,
           builder: (context, child) {
             return MediaQuery(
