@@ -3,13 +3,13 @@ import 'package:e_commerce_app/widgets/email_field.dart';
 import 'package:e_commerce_app/widgets/password_field.dart';
 import 'package:e_commerce_app/widgets/primary_button.dart';
 import 'package:e_commerce_app/widgets/social_login_button.dart';
-import 'package:e_commerce_app/widgets/textbutton.dart';
+import 'package:e_commerce_app/widgets/labelbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class CreateAccountScreen extends StatelessWidget {
+  const CreateAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
   Widget _buildTop(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: "Welcome\n",
+        text: "Create an\n",
         style: TextStyle(
           color: AppColors.blackColor,
           fontSize: 36.h,
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
         ),
         children: [
           TextSpan(
-            text: "Back!",
+            text: "account",
             style: TextStyle(
               color: AppColors.blackColor,
               fontSize: 36.h,
@@ -81,7 +81,7 @@ Widget _buildFormField(BuildContext context) {
             return null;
           },
         ),
-        SizedBox(height: 40.h),
+        SizedBox(height: 20.h),
         PasswordInputField(
           controller: passwordController,
           hint: 'Password',
@@ -95,26 +95,32 @@ Widget _buildFormField(BuildContext context) {
             return null;
           },
         ),
-        SizedBox(height: 5.h),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(width: 20.w),
-            LabelButton(
-              onPressed: () {},
-              label: "Forgot Password?",
-              style: TextStyle(
-                fontSize: 14.sp,
-                color: AppColors.primaryColor,
-                fontFamily: 'Montserrat',
-              ),
-            ),
-          ],
+        SizedBox(height: 20.h),
+        PasswordInputField(
+          controller: passwordController,
+          hint: 'Confirm Password',
+          validator: (String? value) {
+            if (value == null || value.isEmpty) {
+              return 'Please confirm your password';
+            }
+            if (value != passwordController.text) {
+              return 'Passwords do not match';
+            }
+            return null;
+          },
         ),
-        SizedBox(height: 40.h),
+        SizedBox(height: 10.h),
+        Text(
+          "By creating an account, you agree to our Terms of Service and Privacy Policy.",
+          style: TextStyle(
+            fontSize: 14.sp,
+            color: AppColors.greyColor,
+            fontFamily: 'Montserrat',
+          ),
+        ),
+        SizedBox(height: 30.h),
         PrimaryButton(
-          label: 'Login',
+          label: 'Create Account',
           onPressed: () {
             if (formKey.currentState!.validate()) {
               // Handle login logic
@@ -168,12 +174,12 @@ Widget _buildSocialLoginButtons(BuildContext context) {
           ),
         ],
       ),
-      SizedBox(height: 40.h),
+      SizedBox(height: 20.h),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Create an account ",
+            "I have an account ",
             style: TextStyle(
               fontSize: 14.sp,
               color: AppColors.greyColor,
@@ -184,7 +190,7 @@ Widget _buildSocialLoginButtons(BuildContext context) {
             onPressed: () {
               Navigator.pushNamed(context, '/signup');
             },
-            label: "Sign Up",
+            label: "Login",
             style: TextStyle(
               fontSize: 14.sp,
               color: AppColors.primaryColor,

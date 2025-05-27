@@ -2,7 +2,7 @@ import 'package:e_commerce_app/features/splashscreen/choose_products.dart';
 import 'package:e_commerce_app/features/splashscreen/get_your_orders.dart';
 import 'package:e_commerce_app/features/splashscreen/make_payment.dart';
 import 'package:e_commerce_app/utils/colors.dart';
-import 'package:e_commerce_app/widgets/textbutton.dart';
+import 'package:e_commerce_app/widgets/labelbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

@@ -1,4 +1,5 @@
-import 'package:e_commerce_app/features/splashscreen/login_screen.dart';
+import 'package:e_commerce_app/features/create_account/create_account.dart';
+import 'package:e_commerce_app/features/loginscreen/login_screen.dart';
 import 'package:e_commerce_app/features/splashscreen/splash_screen.dart';
 import 'package:e_commerce_app/widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ class AppRoutes {
     splash: (context) => const SplashScreen(),
     pageindicator: (context) => SplashScreenPageIndicator(),
     login: (context) => const LoginScreen(),
+    create_account: (context) => const CreateAccountScreen(),
     //test: (context) => MyApp(),
     //   welcome: (context) => const WelcomeScreen(),
     //   onboarding: (context) => const OnboardingScreen(),
@@ -17,6 +19,7 @@ class AppRoutes {
   static String splash = '/';
   static String pageindicator = '/page_indicator';
   static String login = '/login';
+  static String create_account = '/create_account';
   // static String test = '/test';
   // static String welcome = '/welcome';
   // static String onboarding = '/onboarding';

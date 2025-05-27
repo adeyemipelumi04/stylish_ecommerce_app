@@ -3,7 +3,7 @@ import 'package:e_commerce_app/widgets/email_field.dart';
 import 'package:e_commerce_app/widgets/password_field.dart';
 import 'package:e_commerce_app/widgets/primary_button.dart';
 import 'package:e_commerce_app/widgets/social_login_button.dart';
-import 'package:e_commerce_app/widgets/textbutton.dart';
+import 'package:e_commerce_app/widgets/labelbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
