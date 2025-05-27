@@ -30,7 +30,7 @@ class SplashScreen extends StatelessWidget {
         } else {
           // Navigate to the next screen after loading
           WidgetsBinding.instance.addPostFrameCallback((_) {
-            Navigator.pushReplacementNamed(context, '/welcome');
+            Navigator.pushReplacementNamed(context, '/chooseProducts');
           });
           // Return an empty container while navigating
           return Scaffold(
