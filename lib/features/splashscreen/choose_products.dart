@@ -50,10 +50,17 @@ class ChooseProducts extends StatelessWidget {
           ),
           LabelButton(
             onPressed: () {
-              Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+              Navigator.of(
+                context,
+              ).pushNamedAndRemoveUntil('/login', (route) => false);
             },
             label: 'Skip',
-            textColor: Colors.black,
+            style: TextStyle(
+              fontSize: 20.0.sp,
+              fontWeight: FontWeight.w400,
+              color: AppColors.blackColor,
+              fontFamily: 'Montserrat',
+            ),
           ),
         ],
       ),

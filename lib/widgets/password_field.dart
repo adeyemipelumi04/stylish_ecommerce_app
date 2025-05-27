@@ -47,7 +47,7 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
       width: MediaQuery.of(context).size.width,
       child: TextFormField(
         focusNode: _focus,
-        cursorColor: Colors.white,
+        cursorColor: AppColors.blackColor,
         controller: widget.controller,
         autocorrect: false,
         validator: widget.validator,
@@ -55,72 +55,76 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
         style: TextStyle(
           fontSize: 14.0.sp,
           fontWeight: FontWeight.w500,
-          color: Colors.white,
+          color: AppColors.blackColor,
         ),
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.blueGrey.withOpacity(0.1),
           enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              width: 1.0,
-              color: AppColors.primaryColor2,
-            ),
-            borderRadius: BorderRadius.circular(4.0.r),
+            borderSide: BorderSide(width: 1.0, color: AppColors.greyColor),
+            borderRadius: BorderRadius.all(Radius.circular(8.0.r)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              width: 1.0,
-              color: AppColors.primaryColor2,
-            ),
-            borderRadius: BorderRadius.circular(4.0.r),
+            borderSide: BorderSide(width: 1.0, color: AppColors.greyColor),
+            borderRadius: BorderRadius.all(Radius.circular(8.0.r)),
           ),
           errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               width: 1.0,
-              color: Colors.red,
+              color: AppColors.primaryColor,
             ),
-            borderRadius: BorderRadius.circular(4.0.r),
+            borderRadius: BorderRadius.circular(8.0.r),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               width: 1.0,
-              color: Colors.red,
+              color: AppColors.primaryColor,
             ),
             borderRadius: BorderRadius.circular(4.0.r),
           ),
           errorMaxLines: 3,
-          contentPadding: EdgeInsets.fromLTRB(
-            12.0.w,
-            15.0.h,
-            12.0.w,
-            15.0.h,
-          ),
+          contentPadding: EdgeInsets.fromLTRB(12.0.w, 15.0.h, 12.0.w, 15.0.h),
           hintText: widget.hint,
           hintStyle: TextStyle(
             fontSize: 14.0.sp,
-            color: Colors.white70,
+            color: Colors.black54,
             fontWeight: FontWeight.w300,
           ),
-          suffixIcon: GestureDetector(
-            child: Container(
-              padding: const EdgeInsets.all(14.0),
-              child: _obscureText
-                  ? SvgPicture.asset(
-                      width: 1,
-                      height: 1,
-                      'assets/svgs/eye_hidden.svg',
-                      // ignore: deprecated_member_use
-                      color: Colors.white70,
-                    )
-                  : SvgPicture.asset(
-                      'assets/svgs/eye.svg',
-                      width: 1,
-                      height: 1,
-                      // ignore: deprecated_member_use
-                      color: Colors.white70,
-                    ),
+          prefixIcon: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0.h, vertical: 24.0.h),
+            child: SvgPicture.asset(
+              'svgs/password.svg',
+              height: 18.h,
+              width: 18.w,
             ),
-            onTap: () => setState(() {
-              _obscureText = !_obscureText;
-            }),
+          ),
+          suffixIcon: GestureDetector(
+            child:
+                // Container(
+                //   padding: const EdgeInsets.all(14.0),
+                //   child:
+                _obscureText
+                    ? IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                      icon: Icon(Icons.visibility_off, size: 24.sp),
+                    )
+                    : IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      },
+                      icon: Icon(Icons.visibility_outlined, size: 24.sp),
+                    ),
+            // ),
+            onTap:
+                () => setState(() {
+                  _obscureText = !_obscureText;
+                }),
           ),
         ),
       ),

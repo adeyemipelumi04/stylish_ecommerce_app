@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GetYourOrder extends StatelessWidget {
-  const GetYourOrder ({super.key});
+  const GetYourOrder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class GetYourOrder extends StatelessWidget {
             text: TextSpan(
               text: "3",
               style: TextStyle(
-                color: Colors.black,
+                color: AppColors.blackColor,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
@@ -40,7 +40,7 @@ class GetYourOrder extends StatelessWidget {
                 TextSpan(
                   text: "/3",
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: AppColors.greyColor,
                     fontSize: 20,
                     fontWeight: FontWeight.normal,
                   ),
@@ -55,7 +55,12 @@ class GetYourOrder extends StatelessWidget {
               ).pushNamedAndRemoveUntil('/login', (route) => false);
             },
             label: 'Skip',
-            textColor: Colors.black,
+            style: TextStyle(
+              fontSize: 20.0.sp,
+              fontWeight: FontWeight.w400,
+              color: AppColors.blackColor,
+              fontFamily: 'Montserrat',
+            ),
           ),
         ],
       ),

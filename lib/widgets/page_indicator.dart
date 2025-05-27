@@ -58,7 +58,13 @@ class _SplashScreenPageIndicatorState extends State<SplashScreenPageIndicator> {
                       );
                     },
                     label: 'Prev',
-                    textColor: AppColors.greyColor,
+
+                    style: TextStyle(
+                      fontSize: 20.0.sp,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.greyColor,
+                      fontFamily: 'Montserrat',
+                    ),
                   )
                 else
                   SizedBox(width: 64.0.h), // To keep spacing consistent
@@ -88,7 +94,12 @@ class _SplashScreenPageIndicatorState extends State<SplashScreenPageIndicator> {
                     }
                   },
                   label: _currentPage == 2 ? 'Get Started' : 'Next',
-                  textColor: AppColors.primaryColor,
+                  style: TextStyle(
+                    fontSize: 20.0.sp,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.primaryColor,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
               ],
             ),
