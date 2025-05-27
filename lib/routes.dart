@@ -19,6 +19,7 @@ class AppRoutes {
   static String splash = '/';
   static String pageindicator = '/page_indicator';
   static String login = '/login';
+  // ignore: non_constant_identifier_names
   static String create_account = '/create_account';
   // static String test = '/test';
   // static String welcome = '/welcome';
