@@ -1,4 +1,8 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:e_commerce_app/features/create_account/create_account.dart';
+import 'package:e_commerce_app/features/forgot_password/forgot_password.dart';
+import 'package:e_commerce_app/features/get_started/get_started.dart';
 import 'package:e_commerce_app/features/loginscreen/login_screen.dart';
 import 'package:e_commerce_app/features/splashscreen/splash_screen.dart';
 import 'package:e_commerce_app/widgets/page_indicator.dart';
@@ -10,20 +14,17 @@ class AppRoutes {
     pageindicator: (context) => SplashScreenPageIndicator(),
     login: (context) => const LoginScreen(),
     create_account: (context) => const CreateAccountScreen(),
+    forgot_password: (context) => const ForgotPasswordScreen(),
+    get_started: (context) => const GetStartedScreen(),
     //test: (context) => MyApp(),
-    //   welcome: (context) => const WelcomeScreen(),
-    //   onboarding: (context) => const OnboardingScreen(),
-    //   authentication: (context) => const AuthenticationScreen(),
   };
 
   static String splash = '/';
   static String pageindicator = '/page_indicator';
-  static String login = '/login';
-  // ignore: non_constant_identifier_names
+  static String login = '/login_screen';
   static String create_account = '/create_account';
+  static String forgot_password = '/forgot_password';
+  static String get_started = '/get_started';
+
   // static String test = '/test';
-  // static String welcome = '/welcome';
-  // static String onboarding = '/onboarding';
-  // static String authentication = '/authentication';
-  // static String signup = '/signup';
 }
