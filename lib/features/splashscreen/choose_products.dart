@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/utils/colors.dart';
-import 'package:e_commerce_app/widgets/textbutton.dart';
+import 'package:e_commerce_app/widgets/labelbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
