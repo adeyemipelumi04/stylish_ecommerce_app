@@ -68,7 +68,14 @@ class EmailInputField extends StatelessWidget {
               horizontal: 16.0,
               vertical: 24.0,
             ),
-            child: SvgPicture.asset('svgs/User.svg', height: 18.h, width: 18.w),
+            child: SvgPicture.asset(
+              // Use a different SVG if used in forgot password screen
+              (ModalRoute.of(context)?.settings.name == '/forgot_password')
+                  ? 'svgs/email.svg'
+                  : 'svgs/User.svg',
+              height: 18.h,
+              width: 18.w,
+            ),
           ),
         ),
         keyboardType: TextInputType.emailAddress,
