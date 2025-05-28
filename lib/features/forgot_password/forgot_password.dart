@@ -64,12 +64,8 @@ Widget _buildFormField(BuildContext context) {
             if (value == null || value.isEmpty) {
               return 'Please enter your email address';
             }
-            // Simple email regex
             final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
-            // Username: at least 3 chars, no spaces
-
-            if (!emailRegex.hasMatch(value) &&
-                (value.length < 3 || value.contains(' '))) {
+            if (!emailRegex.hasMatch(value) && (value.contains(' '))) {
               return 'Enter a valid email address';
             }
             return null;
