@@ -3,7 +3,9 @@
 import 'package:e_commerce_app/features/create_account/create_account.dart';
 import 'package:e_commerce_app/features/forgot_password/forgot_password.dart';
 import 'package:e_commerce_app/features/get_started/get_started.dart';
+import 'package:e_commerce_app/features/homepage/home_page.dart';
 import 'package:e_commerce_app/features/loginscreen/login_screen.dart';
+import 'package:e_commerce_app/features/splashscreen/choose_products.dart';
 import 'package:e_commerce_app/features/splashscreen/splash_screen.dart';
 import 'package:e_commerce_app/widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,8 @@ class AppRoutes {
     create_account: (context) => const CreateAccountScreen(),
     forgot_password: (context) => const ForgotPasswordScreen(),
     get_started: (context) => const GetStartedScreen(),
+    home: (context) => const HomeScreen(),
+    chooseProducts: (context) => ChooseProducts(),
     //test: (context) => MyApp(),
   };
 
@@ -25,6 +29,8 @@ class AppRoutes {
   static String create_account = '/create_account';
   static String forgot_password = '/forgot_password';
   static String get_started = '/get_started';
+  static String home = '/home';
+  static String chooseProducts = '/chooseProducts';
 
   // static String test = '/test';
 }

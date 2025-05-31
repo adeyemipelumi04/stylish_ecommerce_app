@@ -52,7 +52,7 @@ class GetYourOrder extends StatelessWidget {
             onPressed: () {
               Navigator.of(
                 context,
-              ).pushNamedAndRemoveUntil('/login', (route) => false);
+              ).pushNamedAndRemoveUntil('/login', (route) => true);
             },
             label: 'Skip',
             style: TextStyle(
