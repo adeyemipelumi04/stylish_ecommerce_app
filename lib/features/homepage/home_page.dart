@@ -512,13 +512,6 @@ final List<Map<String, dynamic>> allFeaturedTopTab = [
   {'title': 'Celebrity', 'image': 'pngs/fashion.png'},
 ];
 
-class WishlistPage extends StatelessWidget {
-  const WishlistPage({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('Wishlist Page')));
-  }
-}
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

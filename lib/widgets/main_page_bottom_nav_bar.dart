@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/features/homepage/home_page.dart';
+import 'package:e_commerce_app/features/wishlist/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainNavigation extends StatefulWidget {
@@ -13,7 +14,7 @@ class _MainNavigationState extends State<MainNavigation> {
 
   final List<Widget> _pages = [
     const HomeScreen(),
-    const WishlistPage(),
+    const WishlistScreen(),
     const CartPage(),
     const SearchPage(),
     const SettingsPage(),
@@ -34,10 +35,7 @@ class _MainNavigationState extends State<MainNavigation> {
           });
         },
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
             label: 'Wishlist',
@@ -46,10 +44,7 @@ class _MainNavigationState extends State<MainNavigation> {
             icon: Icon(Icons.shopping_cart_outlined),
             label: 'Cart',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
