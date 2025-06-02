@@ -7,6 +7,7 @@ import 'package:e_commerce_app/features/homepage/home_page.dart';
 import 'package:e_commerce_app/features/loginscreen/login_screen.dart';
 import 'package:e_commerce_app/features/splashscreen/choose_products.dart';
 import 'package:e_commerce_app/features/splashscreen/splash_screen.dart';
+import 'package:e_commerce_app/widgets/main_page_bottom_nav_bar.dart';
 import 'package:e_commerce_app/widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class AppRoutes {
     get_started: (context) => const GetStartedScreen(),
     home: (context) => const HomeScreen(),
     chooseProducts: (context) => ChooseProducts(),
+    mainnavigation: (context) => MainNavigation(),
     //test: (context) => MyApp(),
   };
 
@@ -31,6 +33,7 @@ class AppRoutes {
   static String get_started = '/get_started';
   static String home = '/home';
   static String chooseProducts = '/chooseProducts';
+  static String mainnavigation = '/mainnavigation';
 
   // static String test = '/test';
 }
